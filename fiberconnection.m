@@ -25,5 +25,11 @@ while br==0
     L2=L2+0.01;
 end
 s=[x1(min_index) y1(min_index)];
+
+% check if longer 
+if norm(f1-s)>norm(f1-p1)
+    s=p1
+end
+    
 end
 
