@@ -1,4 +1,4 @@
-function [x,y] = ellipse(f1,f2,L)
+function [x,y] = ellipse(f1,f2,L,n)
 %ELLIPSE ellipse constructe by string of length L and focal points f
 %   for rebeci
 %% check for wrong inputs
@@ -16,7 +16,7 @@ m=(f1+f2)/2; % center point
 the=atan2(f2(1)-f1(1),f2(2)-f1(2));%angle between f1 f2
 
 %parametrize ellipse with axis
-t=0:0.01:2*pi;
+t=linspace(0,2*pi,n);
 
 x=-cos(the)*(b*sin(t))+sin(the)*(a*cos(t))+m(1);
 y=sin(the)*(b*sin(t))+cos(the)*(a*cos(t))+m(2);
