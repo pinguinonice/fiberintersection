@@ -1,19 +1,19 @@
-function [s,x1,y1,x2,y2,L2] = fiberconnection3d(L,f1,f2,p1,p2)
+function [s,x1,y1,z1,x2,y2,z2,L2] = fiberconnection3d(L,f1,f2,p1,p2)
 %FIBERCONNECTION Summary of this function goes here
 %   Detailed explanation goes here
 % parametrize ellipses
 
-    [x1,y1]=ellipse(f1,f2,L,1000);
+    [x1,y1,z1]=speroid(f1,f2,L,1000);
     
       % finding closest point
-L2=sqrt((x1-p1(1)).^2+(y1-p1(2)).^2)+sqrt((x1-p2(1)).^2+(y1-p2(2)).^2);
+L2=sqrt((x1-p1(1)).^2+(y1-p1(2)).^2+(z1-p1(3)).^2)+sqrt((x1-p2(1)).^2+(y1-p2(2)).^2+(z1-p2(3)).^2);
       
       
 [L2 index]=min(L2);
 
-    [x2,y2]=ellipse(p1,p2,L2,1000);
+    [x2,y2,z2]=speroid(p1,p2,L2,1000);
     
-s=[x1(index),y1(index)];
+s=[x1(index),y1(index),z1(index)];
 
 
     

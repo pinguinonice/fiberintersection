@@ -17,15 +17,15 @@ X=[x(:),y(:),z(:)]';
 
 % calc rotation stuff (arround vector and middlepoint)
 % % rotated and translate
-a=cross(f1-f2,[1 0 0])
+a=cross(f1-f2,[1 0 0]);
 a=a/norm(a);
-w=acos(([f1-f2]*[1 0 0]')/(norm(f1-f2)))
+w=acos(([f1-f2]*[1 0 0]')/(norm(f1-f2)));
 C=[0,-a(3),a(2);a(3),0,-a(1);-a(2),a(1),0];
-R=eye(3)+C*sin(w)+C*C*(1-cos(w))
+R=eye(3)+C*sin(w)+C*C*(1-cos(w));
 
-m=(f1-f2)/2;
-M=repmat(m,[size(X,2),1])'
-X=R'*X-M;
+m=(f1+f2)/2;
+M=repmat(m,[size(X,2),1])';
+X=R'*X+M;
 x=X(1,:);
 y=X(2,:);
 z=X(3,:);
