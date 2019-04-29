@@ -16,7 +16,7 @@ L=norm(f1-f2)+i;
 p1=[j+0 15];
 p2=[15  15];   
     
-[s,x1,y1,x2,y2,L2] = fiberconnection2(L,f1,f2,p1,p2);
+[s,x1,y1,x2,y2,L2] = fiberconnection3d(L,f1,f2,p1,p2);
 S=[S;s];
 %fin
 %% plot

@@ -1,4 +1,4 @@
-function [s,x1,y1,x2,y2,L2] = fiberconnection(L,f1,f2,p1,p2)
+function [s,x1,y1,x2,y2,L2] = fiberconnection3d(L,f1,f2,p1,p2)
 %FIBERCONNECTION Summary of this function goes here
 %   Detailed explanation goes here
 % parametrize ellipses

@@ -7,16 +7,16 @@ close all
 S=[];
 figure
 %gif('L21.gif')
-for j=1:0.5:10
-for i=0:0.1:22
-f1=[0,5];
+for j=0:0.5:15
+for i=0:0.1:100
+f1=[0,0+j];
 f2=[15,0];
 L=norm(f1-f2)+i;
 
-p1=[5 15];
+p1=[j+0 15];
 p2=[15  15];   
     
-[s,x1,y1,x2,y2,L2] = fiberconnection2(L,f1,f2,p1,p2);
+[s,x1,y1,x2,y2,L2] = fiberconnection2d(L,f1,f2,p1,p2);
 S=[S;s];
 %fin
 %% plot
@@ -43,7 +43,7 @@ grid on
 drawnow
 %gif
 %pause(0.1)
-if L2-norm(p1-p2)<0.001
+if L2-norm(p1-p2)<0.01
     break
 end
 end
