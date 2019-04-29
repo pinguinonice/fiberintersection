@@ -7,14 +7,13 @@ close all
 S=[];
 figure
 %gif('L21.gif')
-for j=0:0.5:0
 for i=0:0.1:100
-f1=[0,0+j,1];
-f2=[15,0,10];
+f1=[10,0+j,0];
+f2=[10,10,0];
 L=norm(f1-f2)+i;
 
-p1=[j+0 15,20];
-p2=[15  15,-30];   
+p1=[-10 10,0];
+p2=[0,  10,-10];   
     
 [s,x1,y1,z1,x2,y2,z2,L2] = fiberconnection3d(L,f1,f2,p1,p2);
 S=[S;s];
@@ -22,10 +21,10 @@ S=[S;s];
 %% plot
 
 hold off
-%plot3(x1,y1,z1,'b--')
+%plot3(x1,y1,z1,'b.')
 hold on
 
-%plot3(x2,y2,z2,'r--')
+%plot3(x2,y2,z2,'r.')
 
 plot3(S(:,1),S(:,2),S(:,3),'k.')
 
@@ -45,6 +44,5 @@ drawnow
 %pause(0.1)
 if L2-norm(p1-p2)<0.01
     break
-end
 end
 end
