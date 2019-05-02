@@ -8,7 +8,7 @@ S=[];
 figure
 %gif('L21.gif')
 for i=0:0.1:100
-f1=[10,0+j,0];
+f1=[10,0,0];
 f2=[10,10,0];
 L=norm(f1-f2)+i;
 
@@ -21,10 +21,10 @@ S=[S;s];
 %% plot
 
 hold off
-%plot3(x1,y1,z1,'b.')
+plot3(x1,y1,z1,'b.')
 hold on
 
-%plot3(x2,y2,z2,'r.')
+plot3(x2,y2,z2,'r.')
 
 plot3(S(:,1),S(:,2),S(:,3),'k.')
 
