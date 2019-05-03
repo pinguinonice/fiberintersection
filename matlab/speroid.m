@@ -5,20 +5,25 @@ function [x,y,z] = speroid(f1,f2,L,n)
 
 
 %% calc a b c
-a=L/2;
-b=sqrt((L/2)^2-norm(f1/2-f2/2)^2);
-c=sqrt((L/2)^2-norm(f1/2-f2/2)^2); % spheroid
+A=L/2;
+B=sqrt((L/2)^2-norm(f1/2-f2/2)^2);
+C=sqrt((L/2)^2-norm(f1/2-f2/2)^2); % spheroid
 
-x=a*sin(phi).*cos(the);
-y=b*sin(phi).*sin(the);
-z=c*cos(phi);
+x=A*sin(phi).*cos(the);
+y=B*sin(phi).*sin(the);
+z=C*cos(phi);
 
 X=[x(:),y(:),z(:)]';
 
 % calc rotation stuff (arround vector and middlepoint)
 % % rotated and translate
 a=cross(f1-f2,[1 0 0]);
-a=a/norm(a);
+if ~norm(a)==0
+    a=a/norm(a);
+else
+    a=[0 1 0];
+end
+    
 w=acos(([f1-f2]*[1 0 0]')/(norm(f1-f2)));
 C=[0,-a(3),a(2);a(3),0,-a(1);-a(2),a(1),0];
 R=eye(3)+C*sin(w)+C*C*(1-cos(w));
