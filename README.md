@@ -22,7 +22,9 @@ s, x1, y1, z1, x2, y2, z2, L2 = fiber.connection3d(L, f1, f2, p1, p2)
 
 
 ## 2D Case
+Matlab plots:
 ![With Spheroids](https://github.com/pinguinonice/fiberintersection/blob/master/matlab/example2d1.gif)
 ## 3D Case
+Matlab plots:
 ![With Spheroids](https://github.com/pinguinonice/fiberintersection/blob/master/matlab/example1.gif)
 ![Without Spheroids](https://github.com/pinguinonice/fiberintersection/blob/master/matlab/example2.gif)
