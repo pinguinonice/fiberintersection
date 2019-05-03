@@ -78,13 +78,13 @@ plt.plot(x1, y1, 'b--')
 plt.plot(x2, y2, 'r--')
 
 # points
-plt.plot(s[0], s[1], s[2], 'k.')
+plt.plot(s[0], s[1],  'k.')
 
-plt.plot(f1[0], f1[1], f1[2], 'b.')
-plt.plot(f2[0], f2[1], f2[2], 'b.')
+plt.plot(f1[0], f1[1], 'b.')
+plt.plot(f2[0], f2[1],  'b.')
 
-plt.plot(p1[0], p1[1], p1[2], 'r.')
-plt.plot(p2[0], p2[1], p2[2], 'r.')
+plt.plot(p1[0], p1[1],'r.')
+plt.plot(p2[0], p2[1], 'r.')
 
 # fibers
 plt.plot([f1[0], s[0], f2[0]], [f1[1], s[1], f2[1]], 'k')
