@@ -1,6 +1,11 @@
 import math
 import numpy as np
 import numpy.matlib as npm
+# =============================================================================
+# Created By  : Philipp J. Schneider
+# Contact : philipp.schneider at ifp.uni-stuttgart.de 
+# Created Date: May 2019
+# =============================================================================
 
 
 ########### ellipse parametrizer ###################
