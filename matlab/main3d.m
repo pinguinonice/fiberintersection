@@ -6,7 +6,7 @@ close all
 
 S=[];
 figure
-gif('example2.gif')
+%gif('example2.gif')
 for i=0:0.1:100
 f1=[0,0,9];
 f2=[5,0,14];
@@ -46,7 +46,7 @@ grid on
 view([-50-i*5 41+i])
 
 drawnow
-gif
+%gif
 %pause(0.1)
 if L2-norm(p1-p2)<0.01
     break

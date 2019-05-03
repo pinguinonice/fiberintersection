@@ -6,9 +6,9 @@ close all
 
 S=[];
 figure
-%gif('L21.gif')
-for j=0:0.5:15
-for i=0:0.1:100
+gif('example2d1.gif')
+for j=0:1:15
+for i=0:0.2:100
 f1=[0,0+j];
 f2=[15,0];
 L=norm(f1-f2)+i;
@@ -41,7 +41,7 @@ axis equal
 axis([-5 20 -10 20])
 grid on
 drawnow
-%gif
+gif
 %pause(0.1)
 if L2-norm(p1-p2)<0.01
     break
