@@ -4,6 +4,7 @@ import numpy.matlib as npm
 # =============================================================================
 # Created By  : Philipp J. Schneider
 # Contact : philipp.schneider at ifp.uni-stuttgart.de 
+#           https://github.com/pinguinonice
 # Created Date: May 2019
 # =============================================================================
 
