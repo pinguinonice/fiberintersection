@@ -14,9 +14,9 @@ p2 = ([5,  5, 12])  # point 2
 
 #use 3d connection
 s, x1, y1, z1, x2, y2, z2, L2 = fiber.connection3d(L, f1, f2, p1, p2)
-    # s:         array [x,y,y] of the intersection
-    # x1,y1,z1:  array points on spheroid 1
-    # x2,y2,z2:  array points on spheroid 2
+    # s:         array [x,y,z] intersection point
+    # x1,y1,z1:  array points off spheroid 1
+    # x2,y2,z2:  array points off spheroid 2
     # L2:        length of fiber 2
 ```
 
